@@ -1,0 +1,266 @@
+body.admin {
+    background: #fff;
+}
+
+.admin .site-header {
+    border-bottom: 1px solid var(--line);
+}
+
+.login {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.login-card,
+.admin-form,
+.admin-card,
+.message-card {
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
+.login-card {
+    width: min(100%, 28rem);
+}
+
+.admin-nav {
+    border-bottom: 1px solid var(--line);
+}
+
+.admin-main {
+    display: grid;
+    gap: 1.5rem;
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 1rem 0 3rem;
+}
+
+.admin-section {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.admin-section h2 {
+    font-weight: 400;
+}
+
+.admin-nav a {
+    display: block;
+}
+
+.admin-form,
+.admin-card,
+.login-card,
+.message-card {
+    padding: 0.75rem 0;
+    display: grid;
+    gap: 0.75rem;
+    border: 1px solid var(--line);
+}
+
+.admin button,
+.admin-form button,
+.admin-form input[type="submit"],
+.admin-card button,
+.login-card button {
+    background: #d80000;
+    color: #fff;
+    border: 1px solid #d80000;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.admin button:hover,
+.admin-form button:hover,
+.admin-form input[type="submit"]:hover,
+.admin-card button:hover,
+.login-card button:hover {
+    background: #b00000;
+    border-color: #b00000;
+}
+
+.admin-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.preview-box {
+    width: min(100%, 220px);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.preview-box img,
+.preview-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.inline-actions,
+.inline-delete-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.msg {
+    width: fit-content;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--line);
+}
+
+.admin-notice {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    padding: 0.85rem 1rem;
+    max-width: min(24rem, calc(100vw - 2rem));
+    background: #111;
+    color: #fff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.admin-notice.is-error {
+    background: #d80000;
+}
+
+.admin-notice.is-success {
+    background: #111;
+}
+
+.site-copyright {
+    position: fixed;
+    right: 12px;
+    bottom: 8px;
+    font-size: 12px;
+    color: var(--muted);
+    z-index: 12000;
+}
+
+.site-copyright a {
+    color: var(--muted);
+    text-decoration: underline;
+}
+
+.site-copyright a:hover {
+    color: var(--text);
+}
+
+.admin .site-header {
+    padding-bottom: 0.5rem;
+}
+
+.admin-nav {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 0.75rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+}
+
+.admin-main {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 1rem 0 3rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.admin-section {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.admin-form label,
+.admin-card label,
+.login-card label {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.admin-form,
+.admin-card,
+.login-card {
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-card input,
+.admin-card textarea,
+.login-card input {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.span-2 {
+    grid-column: 1 / -1;
+}
+
+.inline-actions,
+.inline-delete-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.preview-box {
+    width: 160px;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.msg.error,
+.msg.success {
+    width: fit-content;
+}
+
+.empty-state {
+    padding: 0;
+}
+
+
+@media (max-width: 760px) {
+
+    .admin-nav,
+    .admin-main,
+    .site-header {
+        width: min(100% - 1rem, 1200px);
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-box {
+        width: 100%;
+    }
+
+    .admin-notice {
+        left: 0.5rem;
+        right: 0.5rem;
+        max-width: none;
+    }
+}
